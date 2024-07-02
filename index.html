@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="head"><div><img class="logo" src="images.png" alt=""></div>
+        <h1>Expense Tracker</h1></div>
+        <div class="add-expense">
+            <h2>Add Expense</h2>
+            <label for="expense-name">Exp Name</label>
+            <input type="text" id="expense-name">
+            <label for="category-select">Exp Category:</label>
+            <input type="text" id="category-select">
+            <label for="amount-input">Amount:</label>
+            <input type="number" id="amount-input">
+            <label for="date-input">Date:</label>
+            <input type="date" id="date-input">
+            <div class="expenses"><button id="add-btn">Add Expense</button>
+        </div>
+        
+        <div class="search-filter">
+            <h2>Search and Filter</h2>
+            <label for="month-select">Select Month:</label>
+            <input type="month" id="month-select">
+        </div>
+        
+        <div class="expenses">
+            <h2>Recent Expenses</h2>
+            <div class="flex">
+           
+                <select name="sort-category" id="sort-category">
+                    <option value="Name">Name</option>
+                        <option value="Category">Category</option>
+                        <option value="Amount">Amount</option>
+                        <option value="Date">Date</option>
+                </select>
+                <select name="sort-ad" id="sort-ad">
+                    <option value="asc">ASC</option>
+                    <option value="des">DESC</option>
+                </select>
+                <button id="sort-amount-btn">Sort</button>
+            </div>
+            <table id="expenses-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>
+                            Amount 
+                          
+                        </th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="expense-table-body">
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="report">
+            <h2>Monthly Report</h2>
+            <p>Total Expenses: <span id="total-amount">0</span></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
